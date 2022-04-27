@@ -23,6 +23,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/cursos/ciclo programacion/asp-net/projects/ejemplo_curso_1/ejemplo_curso_1/Pages/Peliculas/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/cursos/ciclo programacion/asp-net/projects/ejemplo_curso_1/ejemplo_curso_1/Pages/Peliculas/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/cursos/ciclo programacion/asp-net/projects/ejemplo_curso_1/ejemplo_curso_1/Pages/Peliculas/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/cursos/ciclo programacion/asp-net/projects/ejemplo_curso_1/ejemplo_curso_1/Pages/Peliculas/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/cursos/ciclo programacion/asp-net/projects/ejemplo_curso_1/ejemplo_curso_1/Pages/Peliculas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVsaWN1bGFzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/cursos/ciclo programacion/asp-net/projects/ejemplo_curso_1/ejemplo_curso_1/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

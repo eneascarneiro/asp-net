@@ -1,7 +1,13 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using ejemplo_curso_1.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<ejemplo_curso_1Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ejemplo_curso_1Context") ?? throw new InvalidOperationException("Connection string 'ejemplo_curso_1Context' not found.")));
 
 var app = builder.Build();
 
