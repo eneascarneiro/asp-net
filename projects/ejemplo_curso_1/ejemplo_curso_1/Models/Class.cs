@@ -30,4 +30,20 @@ namespace ejemplo_curso_1.Models
         public int Edad { get; set; }
         public string Sexo { get; set; } = string.Empty;
     }
+    public class Animal
+    {
+        public int ID { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+
+        [DataType(DataType.Date)]
+        public DateTime FechaNacimiento { get; set; }
+        public int Edad { get; set; }
+    }
+    public class Insecto
+    {
+        public int ID { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+
+        public int Edad { get; set; }
+    }
 }

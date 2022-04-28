@@ -21,9 +21,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\Actores\" />
-    <Folder Include="Pages\Directores\" />
-  </ItemGroup>
-
 </Project>

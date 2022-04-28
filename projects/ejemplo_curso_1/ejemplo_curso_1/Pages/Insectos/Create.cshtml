@@ -1,0 +1,39 @@
+﻿@page
+@model ejemplo_curso_1.Pages.Insectos.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Insecto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Insecto.Nombre" class="control-label"></label>
+                <input asp-for="Insecto.Nombre" class="form-control" />
+                <span asp-validation-for="Insecto.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Insecto.Edad" class="control-label"></label>
+                <input asp-for="Insecto.Edad" class="form-control" />
+                <span asp-validation-for="Insecto.Edad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
