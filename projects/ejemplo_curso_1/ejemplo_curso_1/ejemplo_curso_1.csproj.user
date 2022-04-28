@@ -11,7 +11,7 @@
     <WebStackScaffolding_IsPartialViewSelected>False</WebStackScaffolding_IsPartialViewSelected>
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
-    <WebStackScaffolding_DbContextTypeFullName>ejemplo_curso_1.Data.ejemplo_curso_1_otrosContext</WebStackScaffolding_DbContextTypeFullName>
+    <WebStackScaffolding_DbContextTypeFullName>ejemplo_curso_1.Data.ejemplo_curso_1Context</WebStackScaffolding_DbContextTypeFullName>
     <RazorPage_SelectedScaffolderID>ModelBasedCrudRazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
   </PropertyGroup>

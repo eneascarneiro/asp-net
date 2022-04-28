@@ -49,6 +49,40 @@ namespace ejemplo_curso_1.Migrations
                     b.ToTable("Actor");
                 });
 
+            modelBuilder.Entity("ejemplo_curso_1.Models.Alumno", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<string>("Apellidos")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Edad")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaDeNacimiento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("NotaMedia")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Alumno");
+                });
+
             modelBuilder.Entity("ejemplo_curso_1.Models.Animal", b =>
                 {
                     b.Property<int>("ID")

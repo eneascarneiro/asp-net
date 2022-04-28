@@ -1,0 +1,55 @@
+﻿@page
+@model ejemplo_curso_1.Pages.Alumnos.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Alumno</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno.Nombre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alumno.Nombre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno.Apellidos)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alumno.Apellidos)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno.Edad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alumno.Edad)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno.FechaDeNacimiento)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alumno.FechaDeNacimiento)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno.Genero)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alumno.Genero)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alumno.NotaMedia)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alumno.NotaMedia)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Alumno.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

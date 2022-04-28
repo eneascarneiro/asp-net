@@ -46,4 +46,16 @@ namespace ejemplo_curso_1.Models
 
         public int Edad { get; set; }
     }
+    public class Alumno
+    {
+        public int ID { get; set; }
+        public string Nombre { get; set; } = string.Empty;
+        public string Apellidos { get; set; } = string.Empty;
+
+        public int Edad { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime FechaDeNacimiento { get; set; }
+        public string Genero { get; set; } = string.Empty;
+        public decimal NotaMedia { get; set; }
+    }
 }

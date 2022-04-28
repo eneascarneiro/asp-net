@@ -24,5 +24,7 @@ namespace ejemplo_curso_1.Data
         public DbSet<ejemplo_curso_1.Models.Animal> Animal { get; set; }
 
         public DbSet<ejemplo_curso_1.Models.Insecto> Insecto { get; set; }
+
+        public DbSet<ejemplo_curso_1.Models.Alumno> Alumno { get; set; }
     }
 }

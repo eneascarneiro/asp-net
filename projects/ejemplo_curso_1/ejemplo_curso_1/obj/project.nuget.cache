@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "CXeZhN9GAUsdeol6gyY6ZCIhdqfY+Tb4wprp5ts4le38RPSFrxeiu38C0G0HnjxHakM54F6UEDUBgwMfekmipw==",
+  "dgSpecHash": "51hrlsKUQ4ZvC0CEPdOzFeW1Ih6EuZO2pUtzNihsEIDzcNSSNtCbEaFkwN/IgnaTjHpquPO6H6hTrN480BZruw==",
   "success": true,
   "projectFilePath": "D:\\cursos\\ciclo programacion\\asp-net\\projects\\ejemplo_curso_1\\ejemplo_curso_1\\ejemplo_curso_1.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,9 @@
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.4\\microsoft.entityframeworkcore.analyzers.6.0.4.nupkg.sha512",
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.4\\microsoft.entityframeworkcore.design.6.0.4.nupkg.sha512",
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.4\\microsoft.entityframeworkcore.relational.6.0.4.nupkg.sha512",
+    "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\1.1.6\\microsoft.entityframeworkcore.relational.design.1.1.6.nupkg.sha512",
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.4\\microsoft.entityframeworkcore.sqlserver.6.0.4.nupkg.sha512",
+    "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver.design\\1.1.6\\microsoft.entityframeworkcore.sqlserver.design.1.1.6.nupkg.sha512",
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.4\\microsoft.entityframeworkcore.tools.6.0.4.nupkg.sha512",
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\josemanuela\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
