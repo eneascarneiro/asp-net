@@ -1,0 +1,31 @@
+﻿@page
+@model crm.Pages.Cuentas.Login.IndexModel
+@{
+}
+<div class= "container border" style="padding:20px">
+    <form method="post">
+        <div class = "form-group row" >
+            <div class="col-2">
+                <label asp-for="Usuario.USUARIO"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" class ="form-control" asp-for ="Usuario.USUARIO" />
+            </div>
+            <span class="text-danger" asp-validation-for="Usuario.USUARIO"></span>
+         </div>
+        <div class = "form-group row" >
+            <div class="col-2">
+                <label asp-for="Usuario.PASSWORD"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" class ="form-control" asp-for ="Usuario.PASSWORD" />
+            </div>
+            <span class="text-danger" asp-validation-for="Usuario.PASSWORD"></span>
+        </div>
+        <div class = "form-group row" >
+            <div class="col-5">
+                <input type="submit" class ="btn btn-primary" value="Login"/>
+            </div>
+        </div>
+    </form>
+</div>

@@ -261,7 +261,7 @@ namespace crm.Models
     {
         public int ID { get; set; }
         //
-        [Display(Name = "Nonbre de usuario")]
+        [Display(Name = "Usuario")]
         [Required]
         [StringLength(20)]
         public String USUARIO { get; set; } = "";
