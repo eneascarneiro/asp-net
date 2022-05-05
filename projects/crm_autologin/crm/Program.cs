@@ -7,6 +7,12 @@ using Microsoft.AspNetCore.Identity;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("crmContextConnection");
 
+builder.Services.AddDbContext<crmContext>(options =>
+    options.UseSqlServer(connectionString));;
+
+builder.Services.AddDefaultIdentity<crmUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<crmContext>();;
+
 
 builder.Services.AddDbContext<CrmContext>(options =>
     options.UseSqlServer(connectionString));;

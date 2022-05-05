@@ -30,7 +30,7 @@ builder.Services.AddSession(options =>
     //Nombre de la cookie de almacenamiento
     options.Cookie.Name = ".crm.Session";
     //Tiempo para que expire la sesión
-    options.IdleTimeout = TimeSpan.FromMinutes(15);
+    options.IdleTimeout = TimeSpan.FromMinutes(2);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
