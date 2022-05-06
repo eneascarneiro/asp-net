@@ -51,32 +51,57 @@ namespace crm.Pages.Login
                 var Username = Credential.USUARIO;
                 var Password = Credential.PASSWORD;
                 string sql = "EXEC Validate_User @Username = {0}, @password  = {1}";
-                var users = _context.Usuarios.FromSqlRaw<Usuarios>(sql, Username, Password).ToList();
+                var users = _context.Usuarios.FromSqlRaw(sql, Username, Password).ToList();
                 if (users.Count == 1)
                 {
-                    //Seting session values
-                    //https://www.learnrazorpages.com/razor-pages/session-state
-                    HttpContext.Session.SetInt32("UserLogged", 1);
-                    HttpContext.Session.SetString("User", Username);
+                    if (users[0].ID <= 0)
+                    {
+                        if (users[0].ID == -2)
+                        {
+                            HttpContext.Session.SetInt32("UserLogged", 0);
+                            HttpContext.Session.SetString("User", "");
+                            return Page();
+                        }
+                        else if (users[0].ID == -1)
+                        {
+                            HttpContext.Session.SetInt32("UserLogged", 0);
+                            HttpContext.Session.SetString("User", "");
+                            return Page();
+                        }
+                        else
+                        {
+                            HttpContext.Session.SetInt32("UserLogged", 0);
+                            HttpContext.Session.SetString("User", "");
+                            return Page();
+                        }
+                    }
+                    else
+                    {
+                        //Seting session values
+                        //https://www.learnrazorpages.com/razor-pages/session-state
+                        HttpContext.Session.SetInt32("UserLogged", 1);
+                        HttpContext.Session.SetString("User", Username);
 
 
-                    //Creating security context
-                    /*
-                     * https://docs.microsoft.com/es-es/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationservice?view=aspnetcore-6.0
-                     */
-                    var claims = new List<Claim> {
+                        //Creating security context
+                        /*
+                         * https://docs.microsoft.com/es-es/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationservice?view=aspnetcore-6.0
+                         */
+                        var claims = new List<Claim> {
                            new Claim(ClaimTypes.Name, Username),
                            new Claim(ClaimTypes.Email, Username + "@crm.com")
                     };
-                    //Creamos la identidad para asociarle los valores
-                    var  identity = new ClaimsIdentity(claims, "MyCookieAuth");
-                    //Ahora creamos el elemento principal para seguridad qie contiene el contexto de seguridad
-                    ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
-                    //Preparamos la cookie
-                    await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
-                    //Fin Creating security context
-                    //Si el login es correcto redirigimos al index
-                    return RedirectToPage("/Index");
+                        //Creamos la identidad para asociarle los valores
+                        var identity = new ClaimsIdentity(claims, "MyCookieAuth");
+                        //Ahora creamos el elemento principal para seguridad qie contiene el contexto de seguridad
+                        ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
+                        //Preparamos la cookie
+                        await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
+                        //Fin Creating security context
+                        //Si el login es correcto redirigimos al index
+                        return RedirectToPage("/Index");
+                    }
+                    
                 }
                 else
                 {

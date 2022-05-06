@@ -36,7 +36,7 @@ namespace crm.Pages.Cuentas.Login
                 //Validar sin procedimiento
                 //modo 1
                 var query = _context.Usuarios.Where(s => s.USUARIO == Username)
-                       .FirstOrDefault<Usuarios>();
+                       .FirstOrDefault();
                 //¿Encontré al usuario?
                 if (!string.IsNullOrEmpty(query.ToString()))
                 {
