@@ -35,6 +35,7 @@ namespace crm.Pages.Login
         // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPost()
         {
+            //Para ver errores al arrancar post en el modelo
             var errors = ModelState.Values.SelectMany(v => v.Errors);
             //Seguridad comprobamos las credenciales
             if (!ModelState.IsValid)
@@ -50,6 +51,7 @@ namespace crm.Pages.Login
             {
                 var Username = Credential.USUARIO;
                 var Password = Credential.PASSWORD;
+                Console.WriteLine("validando usuario");
                 string sql = "EXEC Validate_User @Username = {0}, @password  = {1}";
                 var users = _context.Usuarios.FromSqlRaw(sql, Username, Password).ToList();
                 if (users.Count == 1)
@@ -90,14 +92,16 @@ namespace crm.Pages.Login
                         var claims = new List<Claim> {
                            new Claim(ClaimTypes.Name, Username),
                            new Claim(ClaimTypes.Email, Username + "@crm.com")
-                    };
+                        };
                         //Creamos la identidad para asociarle los valores
                         var identity = new ClaimsIdentity(claims, "MyCookieAuth");
-                        //Ahora creamos el elemento principal para seguridad qie contiene el contexto de seguridad
+                        //Ahora creamos el elemento principal para seguridad qie contiene el
+                        //contexto de seguridad
                         ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);
                         //Preparamos la cookie
                         await HttpContext.SignInAsync("MyCookieAuth", claimsPrincipal);
                         //Fin Creating security context
+
                         //Si el login es correcto redirigimos al index
                         return RedirectToPage("/Index");
                     }
