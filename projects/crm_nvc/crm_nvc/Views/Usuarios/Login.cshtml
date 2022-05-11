@@ -1,0 +1,44 @@
+﻿@model crm_nvc.Models.Usuarios
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class= "container border" style="padding:20px">
+    <form asp-action="Login">
+        <div class = "form-group row" >
+            <div class="col-2">
+                <label asp-for="USUARIO"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" class ="form-control" asp-for ="USUARIO" />
+            </div>
+            <span class="text-danger" asp-validation-for="USUARIO"></span>
+         </div>
+        <div class = "form-group row" >
+            <div class="col-2">
+                <label asp-for="PASSWORD"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" class ="form-control" asp-for ="PASSWORD" />
+            </div>
+           
+            <span class="text-danger" asp-validation-for="PASSWORD"></span>
+        </div>
+        <div class = "form-group row" >
+            <div class="col-2">
+                <input type="submit" class ="btn btn-primary" value="Login"/>
+            </div>
+            <div class="col-5">
+                <span class="text-danger" ></span>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -44,11 +44,31 @@ namespace crm_nvc.Controllers
             return View(usuarios);
         }
 
+        // GET: Usuarios/DetailsName/5
+        public async Task<IEnumerable<Usuarios>>  DetailsName(string? username)
+        {
+            List<Usuarios> Usr = new List<Usuarios>();
+            if (username == null)
+            {
+                return null;
+            }
+            var usuarios = await _context.Usuarios
+                .FirstOrDefaultAsync(m => m.USUARIO == username);
+            if (usuarios == null)
+            {
+                return null;
+            }
+            Usr.Add(usuarios);
+            return Usr;
+        }
+
         // GET: Usuarios/Create
         public IActionResult Create()
         {
             return View();
         }
+
+
 
         // POST: Usuarios/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
