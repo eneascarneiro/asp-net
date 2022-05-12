@@ -157,6 +157,7 @@ namespace crm_mvc.Controllers
         // GET: Usuarios/DetailsName/5
         public async Task<IEnumerable<Usuarios>> DetailsName(string username)
         {
+        
             List<Usuarios> Usr = new List<Usuarios>();
             if (username == null)
             {
@@ -171,7 +172,7 @@ namespace crm_mvc.Controllers
             Usr.Add(usuarios);
             return Usr;
         }
-        // GET: Usuarios/DetailsName/5
+        // GET: Usuarios/DetailsName
         public async Task<Usuarios> DetailsNameUsr(string username)
         {
             

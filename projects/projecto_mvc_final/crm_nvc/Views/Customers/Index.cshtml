@@ -61,10 +61,10 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address.City)
+                @Html.DisplayFor(modelItem => item.Address.Street)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Usuarios.PASSWORD)
+                @Html.DisplayFor(modelItem => item.Usuarios.USUARIO)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |

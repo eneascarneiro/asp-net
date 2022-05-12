@@ -52,7 +52,31 @@ namespace crm_mvc.Controllers
                 
                 if (result != null)
                 {
-                    //el usuario y a password vienen en el result[0]
+                    //Comprobamos si coincide la password
+                    if (result.PASSWORD == Password)
+                    {
+                        //Comprobar si el usuario está activo ISACTIVE == 1
+                        if (result.ISACTIVE == 1)
+                        {
+                            //Ya puedo empezar
+                            //index Usuarios
+                            return RedirectToAction("Index", "Usuarios");
+                            
+                        }
+                        else
+                        {
+                            //Detalle del usuario logeado
+                            return RedirectToAction("Index", "LoginUsuarios");
+
+                        }
+                    }
+                    else
+                    {
+                        //Mostrar todos los clientes Customer
+                        return RedirectToAction("Index", "LoginUsuarios");
+                    }
+                    /*Para ver la próxima sesion
+                     * //el usuario y a password vienen en el result[0]
                     //Comprobamos si coincide la password
                     //if(listarResult.Result.GetEnumerator().Current.PASSWORD == Password)
                     if (result.PASSWORD == Password)
@@ -115,18 +139,21 @@ namespace crm_mvc.Controllers
                         ModelState.AddModelError(string.Empty, "El usuario no es válido, comprobar usuario/password");
                         return RedirectToAction("Index", "LoginUsuarios");
                     }
+                     * 
+                     */
                 }
                 else
                 {
                     //El usuario no existe
-                    ModelState.AddModelError(string.Empty, "El usuario no es válido, comprobar usuario/password");
+                    //ModelState.AddModelError(string.Empty, "El usuario no es válido, comprobar usuario/password");
                     return RedirectToAction("Index", "LoginUsuarios");
 
                 }
+                
             }
             else
             {
-                ModelState.AddModelError(string.Empty, "Error en login contactar con el administrador");
+                //ModelState.AddModelError(string.Empty, "Error en login contactar con el administrador");
                 return RedirectToAction("Index", "LoginUsuarios");
             }
         }
