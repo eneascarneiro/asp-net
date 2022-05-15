@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using crm_mvc.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using crm_mvc.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,6 +52,13 @@ app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.UseMiddleware<DatosNavegadorMiddleware>();
+app.UseMiddleware<EscribirDiaHoraEnLogMiddleware>();
+
+// Código para la gestión de sesiones
+app.UseSession();
+
 
 app.MapControllerRoute(
     name: "default",

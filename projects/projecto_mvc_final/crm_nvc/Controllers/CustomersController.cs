@@ -86,7 +86,9 @@ namespace crm_mvc.Controllers
             {
                 return NotFound();
             }
+           
             ViewData["Address_Id"] = new SelectList(_context.Set<Address>(), "ID", "Street", customer.Address_Id);
+              
             ViewData["User_Id"] = new SelectList(_context.Usuarios, "ID", "USUARIO", customer.User_Id);
             return View(customer);
         }

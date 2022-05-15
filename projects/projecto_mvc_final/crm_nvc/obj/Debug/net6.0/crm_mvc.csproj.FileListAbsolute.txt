@@ -266,3 +266,8 @@ D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\obj\Deb
 D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\obj\Debug\net6.0\crm_mvc.pdb
 D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\obj\Debug\net6.0\crm_mvc.genruntimeconfig.cache
 D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\obj\Debug\net6.0\ref\crm_mvc.dll
+D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+D:\cursos\ciclo programacion\asp-net\projects\projecto_mvc_final\crm_nvc\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

@@ -23,7 +23,21 @@ namespace crm_mvc.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            var usuario_logged = 0;
+            //Comprobar con la sesion sin he validado usuario y password
+            if (HttpContext.Session.GetInt32("UserLogged").HasValue)
+            {
+                 usuario_logged = (int)HttpContext.Session.GetInt32("UserLogged");
+            }
+           
+            if (usuario_logged == 1){
+                return View(await _context.Usuarios.ToListAsync());
+            }
+            else
+            {
+                return RedirectToAction("Index", "LoginUsuarios");
+            }
+            
         }
 
         // GET: Usuarios/Details/5

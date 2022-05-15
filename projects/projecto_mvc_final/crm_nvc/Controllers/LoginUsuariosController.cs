@@ -60,12 +60,16 @@ namespace crm_mvc.Controllers
                         {
                             //Ya puedo empezar
                             //index Usuarios
+                            HttpContext.Session.SetString("usuario", Username);
+                            HttpContext.Session.SetInt32("UserLogged", 1);
                             return RedirectToAction("Index", "Usuarios");
                             
                         }
                         else
                         {
                             //Detalle del usuario logeado
+                            HttpContext.Session.SetString("usuario", Username);
+                            HttpContext.Session.SetInt32("UserLogged", 0);
                             return RedirectToAction("Index", "LoginUsuarios");
 
                         }
@@ -73,6 +77,8 @@ namespace crm_mvc.Controllers
                     else
                     {
                         //Mostrar todos los clientes Customer
+                        HttpContext.Session.SetString("usuario", Username);
+                        HttpContext.Session.SetInt32("UserLogged", 0);
                         return RedirectToAction("Index", "LoginUsuarios");
                     }
                     /*Para ver la próxima sesion
@@ -146,6 +152,8 @@ namespace crm_mvc.Controllers
                 {
                     //El usuario no existe
                     //ModelState.AddModelError(string.Empty, "El usuario no es válido, comprobar usuario/password");
+                    HttpContext.Session.SetString("usuario", "");
+                    HttpContext.Session.SetInt32("UserLogged", 0);
                     return RedirectToAction("Index", "LoginUsuarios");
 
                 }
