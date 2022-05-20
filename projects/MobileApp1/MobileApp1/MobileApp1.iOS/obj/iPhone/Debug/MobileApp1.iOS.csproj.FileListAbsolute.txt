@@ -61,3 +61,4 @@ D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1.i
 D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1.iOS\obj\iPhone\Debug\MobileApp1.iOS.csproj.CopyComplete
 D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1.iOS\obj\iPhone\Debug\MobileApp1.iOS.exe
 D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1.iOS\obj\iPhone\Debug\MobileApp1.iOS.pdb
+D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1.iOS\bin\iPhone\Debug\Newtonsoft.Json.dll

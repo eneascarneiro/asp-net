@@ -20,3 +20,4 @@ D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1\o
 D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1\obj\Debug\netstandard2.0\refint\MobileApp1.dll
 D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1\obj\Debug\netstandard2.0\MobileApp1.pdb
 D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1\obj\Debug\netstandard2.0\ref\MobileApp1.dll
+D:\cursos\ciclo programacion\asp-net\projects\MobileApp1\MobileApp1\MobileApp1\obj\Debug\netstandard2.0\Views\OrdenesView.xaml.g.cs
